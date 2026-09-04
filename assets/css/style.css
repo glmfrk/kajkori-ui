@@ -1,0 +1,582 @@
+/* ==========================================================================
+   1. DESIGN SYSTEM VARIABLES
+   ========================================================================== */
+:root {
+  /* Color Palette */
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  
+  --border-color: #E2E8F0;
+  --border-focus: #10B981;
+  
+  /* Accent Colors */
+  --primary-green: #059669;
+  --primary-green-hover: #047857;
+  --primary-green-light: #ECFDF5;
+  
+  --danger-red: #DC2626;
+  --danger-red-hover: #B91C1C;
+  --danger-red-light: #FEF2F2;
+  
+  /* Shadow Elevation */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  
+  /* Layout & Geometry */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --max-width: 1080px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+}
+
+/* ==========================================================================
+   2. RESET & BASE STYLES
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ==========================================================================
+   3. HEADER
+   ========================================================================== */
+.app-header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-green-light);
+  color: var(--primary-green);
+  border-radius: var(--radius-sm);
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   4. MAIN CONTENT & HERO
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-green);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.hero-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.hero-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--primary-green-light);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.badge-count {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--primary-green);
+}
+
+.badge-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+/* ==========================================================================
+   5. ADD TASK FORM
+   ========================================================================== */
+.add-task-section {
+  margin-bottom: 2.5rem;
+}
+
+.add-task-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.task-input::placeholder {
+  color: var(--text-muted);
+}
+
+.task-input:focus {
+  outline: none;
+  background-color: var(--bg-card);
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green-hover);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   6. TASK GRID & LISTS
+   ========================================================================== */
+.task-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.task-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.column-title h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-active {
+  background-color: var(--primary-green);
+}
+
+.status-completed {
+  background-color: var(--text-muted);
+}
+
+.task-counter {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Task Item Card */
+.task-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.task-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: var(--shadow-md);
+}
+
+/* Custom Checkbox */
+.checkbox-container {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--text-muted);
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  border-color: var(--primary-green);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container input:focus-visible ~ .checkmark {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Task Text & Actions */
+.task-content {
+  flex: 1;
+  word-break: break-word;
+}
+
+.task-text {
+  font-size: 0.925rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.task-completed-card .task-text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-icon:hover {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.btn-icon-danger:hover {
+  background-color: var(--danger-red-light);
+  color: var(--danger-red);
+}
+
+.btn-icon:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 1px;
+}
+
+/* Empty State Styling */
+.empty-state {
+  border: 1.5px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.empty-icon {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.empty-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.empty-description {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   7. HELP & FOOTER SECTIONS
+   ========================================================================== */
+.help-section {
+  margin-top: 1rem;
+}
+
+.help-card {
+  background-color: #F1F5F9;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.help-icon {
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.help-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.help-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.app-footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 1.25rem 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   8. RESPONSIVE BREAKPOINTS (Mobile-First)
+   ========================================================================== */
+
+/* Tablet Optimization (>= 640px) */
+@media (min-width: 640px) {
+  .hero-section {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  
+  .input-group {
+    flex-direction: row;
+  }
+  
+  .btn-primary {
+    width: auto;
+  }
+}
+
+/* Desktop Dual-Column Layout (>= 992px) */
+@media (min-width: 992px) {
+  .main-content {
+    padding: 3rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .task-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}

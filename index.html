@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KajKori — Plan less. Do more.</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container header-container">
+        <a href="#" class="brand-logo" aria-label="KajKori Homepage">
+          <span class="brand-icon" aria-hidden="true">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="brand-name">KajKori</span>
+        </a>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle dark mode placeholder"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="hero-section">
+          <div class="hero-text">
+            <span class="eyebrow">My Tasks</span>
+            <h1 class="hero-title">Make it happen.</h1>
+            <p class="hero-subtitle">
+              Organize your tasks, stay focused, and get things done.
+            </p>
+          </div>
+          <div class="hero-badge">
+            <span class="badge-count">3</span>
+            <span class="badge-label">tasks left</span>
+          </div>
+        </section>
+
+        <section class="add-task-section">
+          <form
+            class="add-task-card"
+            class="add-task-form"
+            onsubmit="return false;"
+          >
+            <label for="task-input" class="input-label"
+              >What needs doing?</label
+            >
+            <div class="input-group">
+              <input
+                type="text"
+                id="task-input"
+                class="task-input"
+                placeholder="e.g., Wireframe mobile navigation..."
+                required
+              />
+              <button type="submit" class="btn btn-primary">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Add Task</span>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <div class="task-grid">
+          <section class="task-column">
+            <div class="column-header">
+              <div class="column-title">
+                <span class="status-indicator status-active"></span>
+                <h2>Active</h2>
+              </div>
+              <span class="task-counter">3</span>
+            </div>
+
+            <div class="task-list">
+              <article class="task-card">
+                <label class="checkbox-container">
+                  <input type="checkbox" class="task-checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <div class="task-content">
+                  <p class="task-text">
+                    Refactor user authentication service and update unit tests
+                  </p>
+                </div>
+                <div class="task-actions">
+                  <button type="button" class="btn-icon" aria-label="Edit task">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                      ></path>
+                      <path
+                        d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <article class="task-card">
+                <label class="checkbox-container">
+                  <input type="checkbox" class="task-checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <div class="task-content">
+                  <p class="task-text">
+                    Design static frontend responsive layout for KajKori v1
+                  </p>
+                </div>
+                <div class="task-actions">
+                  <button type="button" class="btn-icon" aria-label="Edit task">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                      ></path>
+                      <path
+                        d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <article class="task-card">
+                <label class="checkbox-container">
+                  <input type="checkbox" class="task-checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <div class="task-content">
+                  <p class="task-text">
+                    Review pull requests for API integration and ensure
+                    backwards compatibility with legacy database schema
+                  </p>
+                </div>
+                <div class="task-actions">
+                  <button type="button" class="btn-icon" aria-label="Edit task">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                      ></path>
+                      <path
+                        d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <div class="empty-state" style="display: none">
+                <div class="empty-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <p class="empty-title">No active tasks</p>
+                <p class="empty-description">
+                  You're all caught up. Nice work!
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="task-column">
+            <div class="column-header">
+              <div class="column-title">
+                <span class="status-indicator status-completed"></span>
+                <h2>Completed</h2>
+              </div>
+              <span class="task-counter">1</span>
+            </div>
+
+            <div class="task-list">
+              <article class="task-card task-completed-card">
+                <label class="checkbox-container">
+                  <input type="checkbox" class="task-checkbox" checked />
+                  <span class="checkmark"></span>
+                </label>
+                <div class="task-content">
+                  <p class="task-text">
+                    Define core project requirements and typography system
+                  </p>
+                </div>
+                <div class="task-actions">
+                  <button
+                    type="button"
+                    class="btn-icon btn-icon-danger"
+                    aria-label="Delete task"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <div class="empty-state">
+                <div class="empty-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path
+                      d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="empty-title">No completed tasks yet</p>
+                <p class="empty-description">
+                  Completed tasks will appear here.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="help-section">
+          <div class="help-card">
+            <div class="help-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <div class="help-content">
+              <h3 class="help-title">How it works</h3>
+              <p class="help-text">
+                Add a task above, check it when you're done, and use Edit or
+                Delete to manage your tasks.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container footer-container">
+        <p class="copyright">&copy; 2026 KajKori</p>
+        <p class="credits">Built by Gulam Faruk</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
