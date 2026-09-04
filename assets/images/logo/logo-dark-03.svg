@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 160" width="100%" height="100%">
+  <defs>
+    <!-- Dark K Stem Gradient -->
+    <linearGradient id="k_stem_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+
+    <!-- Dark Top Arm Gradient -->
+    <linearGradient id="k_arm_top_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+
+    <!-- Dark Bottom Arm Gradient -->
+    <linearGradient id="k_arm_bot_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <!-- Dark Text Gradient for "Kori" -->
+    <linearGradient id="text_kori_dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Speed Motion Elements -->
+  <g fill="#6366F1">
+    <circle cx="28" cy="88" r="7"/>
+    <rect x="44" y="61" width="30" height="13" rx="6.5"/>
+    <rect x="44" y="81" width="30" height="13" rx="6.5"/>
+    <rect x="44" y="101" width="30" height="13" rx="6.5"/>
+  </g>
+
+  <!-- K Icon Base Structure -->
+  <g>
+    <rect x="85" y="22" width="38" height="116" rx="19" fill="url(#k_stem_dark)"/>
+    <path d="M 104 78 L 158 24 C 166 16 179 16 187 24 L 188 25 C 196 33 196 46 188 54 L 138 104 Z" fill="url(#k_arm_top_dark)"/>
+    <path d="M 118 88 L 172 136 C 180 143 192 142 199 134 L 200 133 C 207 125 206 113 198 106 L 148 62 Z" fill="url(#k_arm_bot_dark)"/>
+    <path d="M 88 80 L 114 106 C 118 110 125 110 129 106 L 182 53 C 187 48 187 40 182 35 L 176 29 C 171 24 163 24 158 29 L 121 66 L 105 50 C 100 45 92 45 87 50 L 81 56 C 76 61 76 69 81 74 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="212" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="82" font-weight="900" fill="#FFFFFF" letter-spacing="-2">Kaj</text>
+  <text x="345" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="82" font-weight="900" fill="url(#text_kori_dark)" letter-spacing="-2">Kori</text>
+
+  <!-- Tagline -->
+  <text x="214" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="700" fill="#94A3B8" letter-spacing="5.5">LET'S GET THE WORK DONE</text>
+</svg>

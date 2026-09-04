@@ -1,0 +1,41 @@
+@use 'variables' as *;
+
+// Mobile-First Breakpoint Mixin
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == '375' {
+    @media (min-width: $bp-375) { @content; }
+  } @else if $breakpoint == '425' {
+    @media (min-width: $bp-425) { @content; }
+  } @else if $breakpoint == '575' {
+    @media (min-width: $bp-575) { @content; }
+  } @else if $breakpoint == '640' {
+    @media (min-width: $bp-640) { @content; }
+  } @else if $breakpoint == '768' {
+    @media (min-width: $bp-768) { @content; }
+  } @else if $breakpoint == '992' {
+    @media (min-width: $bp-992) { @content; }
+  } @else if $breakpoint == '1024' {
+    @media (min-width: $bp-1024) { @content; }
+  } @else if $breakpoint == '1280' {
+    @media (min-width: $bp-1280) { @content; }
+  } @else if $breakpoint == '1440' {
+    @media (min-width: $bp-1440) { @content; }
+  } @else if $breakpoint == '1536' {
+    @media (min-width: $bp-1536) { @content; }
+  } @else if $breakpoint == '1920' {
+    @media (min-width: $bp-1920) { @content; }
+  }
+}
+
+// Flexbox Center Helper
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Focus Ring Utility
+@mixin focus-ring {
+  outline: 2px solid var(--kk-primary);
+  outline-offset: 2px;
+}

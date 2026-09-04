@@ -1,0 +1,45 @@
+@use '../abstracts/mixins' as *;
+
+.kk_add_task_button {
+  min-height: var(--kk-touch-target);
+  padding: 0 1.25rem;
+  background-color: var(--kk-primary);
+  color: var(--kk-text-inverse);
+  font-weight: 600;
+  border-radius: var(--kk-radius-md);
+  @include flex-center;
+  gap: 0.5rem;
+  transition: background-color var(--kk-transition-fast);
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--kk-primary-hover);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.kk_action_button {
+  min-width: 36px;
+  min-height: 36px;
+  @include flex-center;
+  border-radius: var(--kk-radius-sm);
+  color: var(--kk-text-muted);
+  transition: color var(--kk-transition-fast), background-color var(--kk-transition-fast);
+
+  &:hover {
+    background-color: var(--kk-bg-subtle);
+    color: var(--kk-text-main);
+  }
+
+  &.kk_action_delete:hover {
+    background-color: var(--kk-danger-bg);
+    color: var(--kk-danger);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}

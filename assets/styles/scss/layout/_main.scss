@@ -1,0 +1,12 @@
+@use '../abstracts/mixins' as *;
+
+.kk_main_content {
+  flex: 1;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+
+  @include respond-to('768') {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+}

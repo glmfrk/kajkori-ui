@@ -1,0 +1,53 @@
+@use '../abstracts/mixins' as *;
+
+.kk_add_task_card {
+  background-color: var(--kk-bg-surface);
+  border: 1px solid var(--kk-border);
+  border-radius: var(--kk-radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--kk-shadow-sm);
+  margin-top: 1.5rem;
+
+  @include respond-to('768') {
+    padding: 1.5rem;
+  }
+}
+
+.kk_task_input_label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--kk-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.kk_task_form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  @include respond-to('575') {
+    flex-direction: row;
+  }
+}
+
+.kk_task_input {
+  width: 100%;
+  min-height: var(--kk-touch-target);
+  padding: 0.625rem 1rem;
+  background-color: var(--kk-bg-body);
+  border: 1px solid var(--kk-border);
+  border-radius: var(--kk-radius-md);
+  color: var(--kk-text-main);
+  transition: border-color var(--kk-transition-fast), background-color var(--kk-transition-fast);
+
+  &::placeholder {
+    color: var(--kk-text-muted);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--kk-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  }
+}

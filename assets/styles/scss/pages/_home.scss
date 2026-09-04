@@ -1,0 +1,77 @@
+@use '../abstracts/mixins' as *;
+
+.kk_intro_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include respond-to('575') {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.kk_intro_summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--kk-primary-light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--kk-radius-full);
+  width: fit-content;
+}
+
+.kk_summary_badge_count {
+  font-weight: 700;
+  color: var(--kk-primary);
+}
+
+.kk_summary_badge_label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--kk-primary);
+}
+
+.kk_task_board_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @include respond-to('992') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.kk_instructions_section {
+  margin-top: 3rem;
+}
+
+.kk_instructions_card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--kk-primary-light);
+  border-radius: var(--kk-radius-md);
+  border-left: 4px solid var(--kk-primary);
+}
+
+.kk_instructions_icon {
+  color: var(--kk-primary);
+  font-weight: 700;
+}
+
+.kk_instructions_title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--kk-primary);
+}
+
+.kk_instructions_text {
+  font-size: 0.8125rem;
+  color: var(--kk-text-main);
+  margin-top: 0.125rem;
+}

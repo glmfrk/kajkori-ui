@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120">
+  <defs>
+    <!-- Background Dark Container Gradient -->
+    <linearGradient id="dark_bg_grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- K Mark Dark Gradients -->
+    <linearGradient id="k_left_grad_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="k_right_grad_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Container Box -->
+  <rect x="5" y="5" width="510" height="110" rx="16" fill="url(#dark_bg_grad)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Logo Mark Group -->
+  <g transform="translate(35, 18)">
+    <!-- Speed Dots / Motion Lines -->
+    <g fill="#6366F1">
+      <circle cx="8" cy="42" r="5"/>
+      <rect x="20" y="24" width="22" height="10" rx="5"/>
+      <rect x="20" y="37" width="22" height="10" rx="5"/>
+      <rect x="20" y="50" width="22" height="10" rx="5"/>
+    </g>
+
+    <!-- Base K Shape Left Stem -->
+    <path d="M 58 10 C 50 10 44 16 44 24 L 44 60 C 44 68 50 74 58 74 L 62 74 C 70 74 76 68 76 60 L 76 24 C 76 16 70 10 62 10 Z" fill="url(#k_left_grad_dark)"/>
+    
+    <!-- Base K Shape Diagonal Arm -->
+    <path d="M 60 48 L 92 14 C 97 8 106 8 111 14 L 118 21 C 123 26 123 35 118 40 L 86 74 C 81 79 72 79 67 74 Z" fill="url(#k_right_grad_dark)"/>
+
+    <!-- Integrated Checkmark -->
+    <path d="M 45 42 L 59 56 C 63 60 69 60 73 56 L 112 17 C 116 13 116 7 112 3 L 106 -3 C 102 -7 96 -7 92 -3 L 66 23 L 57 14 C 53 10 47 10 43 14 L 37 20 C 33 24 33 30 37 34 Z" fill="#FFFFFF" transform="translate(8, 8)"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="165" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="-1">
+    <tspan fill="#FFFFFF">Kaj</tspan><tspan fill="#818CF8">Kori</tspan>
+  </text>
+  <text x="167" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3.5" fill="#94A3B8">LET'S GET THE WORK DONE</text>
+</svg>

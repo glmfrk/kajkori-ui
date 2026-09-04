@@ -1,0 +1,20 @@
+
+.kk_header_brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.kk_header_brand_logo {
+  display: block;
+  height: 44px; // ট্যাগলাইন স্পষ্ট দেখার জন্য ৪৪ পিক্সেল রাখা হয়েছে
+  width: auto;
+  object-fit: contain;
+
+  @media (max-width: 576px) {
+    height: 36px;
+  }
+}

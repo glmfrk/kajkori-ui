@@ -1,0 +1,27 @@
+@use '../abstracts/mixins' as *;
+
+.kk_empty_state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border: 2px dashed var(--kk-border);
+  border-radius: var(--kk-radius-lg);
+  background-color: var(--kk-bg-surface);
+}
+
+.kk_empty_state_icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--kk-text-muted);
+}
+
+.kk_empty_state_title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--kk-text-main);
+}
+
+.kk_empty_state_text {
+  font-size: 0.875rem;
+  color: var(--kk-text-muted);
+  margin-top: 0.25rem;
+}

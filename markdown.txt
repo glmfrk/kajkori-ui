@@ -1,0 +1,52 @@
+kajkori/
+├── index.html
+└── assets/
+    ├── styles/
+    │   ├── css/
+    │   │   └── style.css
+    │   └── scss/
+    │       ├── abstracts/
+    │       │   ├── _variables.scss
+    │       │   ├── _mixins.scss
+    │       │   └── _functions.scss
+    │       ├── base/
+    │       │   ├── _reset.scss
+    │       │   ├── _base.scss
+    │       │   ├── _typography.scss
+    │       │   └── _utilities.scss
+    │       ├── components/
+    │       │   ├── _buttons.scss
+    │       │   ├── _form.scss
+    │       │   ├── _task_card.scss
+    │       │   ├── _task_list.scss
+    │       │   ├── _empty_state.scss
+    │       │   ├── _theme_toggle.scss
+    │       │   └── _logo.scss
+    │       ├── layout/
+    │       │   ├── _header.scss
+    │       │   ├── _main.scss
+    │       │   ├── _footer.scss
+    │       │   └── _container.scss
+    │       ├── pages/
+    │       │   └── _home.scss
+    │       └── style.scss
+    ├── js/
+    │   └── script.js
+    └── images/
+        └── logo/
+            ├── logo-full-light.svg
+            ├── logo-full-dark.svg
+            ├── logo-square.svg
+            ├── logo-circle.svg
+            └── favicon.icon
+
+
+kajkori/ │ ├── index.html │ └── assets/ │ ├── styles/ │ │ │ ├── css/ │ │ └──
+style.css │ │ │ └── scss/ │ │ │ ├── abstracts/ │ │ ├── _variables.scss │ │ ├──
+_mixins.scss │ │ └── _functions.scss │ │ │ ├── base/ │ │ ├── _reset.scss │ │ ├──
+_base.scss │ │ ├── _typography.scss │ │ └── _utilities.scss │ │ │ ├──
+components/ │ │ ├── _buttons.scss │ │ ├── _form.scss │ │ ├── _task_card.scss │ │
+├── _task_list.scss │ │ ├── _empty_state.scss │ │ ├── _theme_toggle.scss │ │ └──
+_logo.scss │ │ │ ├── layout/ │ │ ├── _header.scss │ │ ├── _main.scss │ │ ├──
+_footer.scss │ │ └── _container.scss │ │ │ ├── pages/ │ │ └── _home.scss │ │ │
+└── style.scss │ ├── js/ │ └── script.js │ └── images/ └── logo/

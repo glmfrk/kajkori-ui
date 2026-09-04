@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+
+.kk_header_section {
+  background-color: var(--kk-bg-surface);
+  border-bottom: 1px solid var(--kk-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition:
+    background-color var(--kk-transition-base),
+    border-color var(--kk-transition-base);
+
+  padding: 10px 0; // tagline স্পষ্ট দেখার জন্য ১০ পিক্সেল প্যাডিং রাখা হয়েছে
+}
+
+.kk_header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+
+  @include respond-to("768") {
+    height: 72px;
+  }
+}

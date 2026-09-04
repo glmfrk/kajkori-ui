@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KajKori — Plan less. Do more.</title>
 
-    <!-- Favicon Links (PNG Format) -->
+    <!-- Favicon Links -->
     <link
       rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/logo/favicon.png"
+      type="image/x-icon"
+      href="./assets/images/logo/favicon.ico"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/images/logo/gradient-circle.png"
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/images/logo/logo-circle.svg"
     />
 
     <!-- Compiled CSS stylesheet -->
@@ -26,139 +25,55 @@
     <header class="kk_header_section">
       <div class="kk_container kk_header_container">
         <a href="#" class="kk_header_brand" aria-label="KajKori Home">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 550 160"
-            width="100%"
-            height="100%"
-          >
-            <defs>
-              <!-- K Stem Gradient -->
-              <linearGradient
-                id="k_stem_light"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stop-color="#2D124D" />
-                <stop offset="50%" stop-color="#4F17C2" />
-                <stop offset="100%" stop-color="#2563EB" />
-              </linearGradient>
-
-              <!-- Top Arm Gradient -->
-              <linearGradient
-                id="k_arm_top_light"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stop-color="#4F17C2" />
-                <stop offset="100%" stop-color="#2563EB" />
-              </linearGradient>
-
-              <!-- Bottom Arm Gradient -->
-              <linearGradient
-                id="k_arm_bot_light"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-              >
-                <stop offset="0%" stop-color="#2563EB" />
-                <stop offset="100%" stop-color="#00D2FF" />
-              </linearGradient>
-
-              <!-- Text Gradient for "Kori" -->
-              <linearGradient
-                id="text_kori_light"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop offset="0%" stop-color="#4F17C2" />
-                <stop offset="100%" stop-color="#2563EB" />
-              </linearGradient>
-            </defs>
-
-            <!-- Left Speed Motion Elements -->
-            <g fill="#4F17C2">
-              <circle cx="28" cy="88" r="7" />
-              <rect x="44" y="61" width="30" height="13" rx="6.5" />
-              <rect x="44" y="81" width="30" height="13" rx="6.5" />
-              <rect x="44" y="101" width="30" height="13" rx="6.5" />
-            </g>
-
-            <!-- K Icon Base Structure -->
-            <g>
-              <!-- Left Vertical Stem -->
-              <rect
-                x="85"
-                y="22"
-                width="38"
-                height="116"
-                rx="19"
-                fill="url(#k_stem_light)"
-              />
-
-              <!-- Upper Diagonal Arm -->
+          <span class="kk_header_brand_mark" aria-hidden="true">
+            <!-- Brand Logo SVG -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 500"
+              width="32"
+              height="32"
+            >
+              <defs>
+                <linearGradient
+                  id="kk_bg_grad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#7C3AED" />
+                  <stop offset="50%" stop-color="#4F46E5" />
+                  <stop offset="100%" stop-color="#2563EB" />
+                </linearGradient>
+                <linearGradient
+                  id="kk_k_grad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#6366F1" />
+                  <stop offset="50%" stop-color="#3B82F6" />
+                  <stop offset="100%" stop-color="#0EA5E9" />
+                </linearGradient>
+              </defs>
               <path
-                d="M 104 78 L 158 24 C 166 16 179 16 187 24 L 188 25 C 196 33 196 46 188 54 L 138 104 Z"
-                fill="url(#k_arm_top_light)"
+                d="M 215 90 L 255 90 C 275 90 290 105 290 125 L 290 220 L 375 115 C 385 102 400 95 415 95 L 440 95 C 460 95 470 120 455 135 L 340 260 L 465 405 C 478 420 468 445 445 445 L 415 445 C 400 445 385 438 375 425 L 290 310 L 290 410 C 290 430 275 445 255 445 L 215 445 C 195 445 180 430 180 410 L 180 125 C 180 105 195 90 215 90 Z"
+                fill="url(#kk_k_grad)"
               />
-
-              <!-- Lower Diagonal Arm -->
+              <g fill="#4F46E5">
+                <circle cx="75" cy="285" r="14" />
+                <rect x="100" y="220" width="48" height="24" rx="12" />
+                <rect x="100" y="272" width="48" height="24" rx="12" />
+                <rect x="100" y="324" width="48" height="24" rx="12" />
+              </g>
               <path
-                d="M 118 88 L 172 136 C 180 143 192 142 199 134 L 200 133 C 207 125 206 113 198 106 L 148 62 Z"
-                fill="url(#k_arm_bot_light)"
-              />
-
-              <!-- Integrated White Checkmark Badge -->
-              <path
-                d="M 88 80 L 114 106 C 118 110 125 110 129 106 L 182 53 C 187 48 187 40 182 35 L 176 29 C 171 24 163 24 158 29 L 121 66 L 105 50 C 100 45 92 45 87 50 L 81 56 C 76 61 76 69 81 74 Z"
+                d="M 200 280 L 255 335 C 265 345 280 345 290 335 L 410 200 C 420 190 420 175 410 165 L 395 150 C 385 140 370 140 360 150 L 272 250 L 235 213 C 225 203 210 203 200 213 L 185 228 C 175 238 175 253 185 263 Z"
                 fill="#FFFFFF"
               />
-            </g>
-
-            <!-- Typography -->
-            <text
-              x="212"
-              y="104"
-              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-              font-size="82"
-              font-weight="900"
-              fill="#0B132B"
-              letter-spacing="-2"
-            >
-              Kaj
-            </text>
-            <text
-              x="345"
-              y="104"
-              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-              font-size="82"
-              font-weight="900"
-              fill="url(#text_kori_light)"
-              letter-spacing="-2"
-            >
-              Kori
-            </text>
-
-            <!-- Tagline -->
-            <text
-              x="214"
-              y="145"
-              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-              font-size="16"
-              font-weight="700"
-              fill="#5A6A85"
-              letter-spacing="3.5"
-            >
-              LET'S GET THE WORK DONE
-            </text>
-          </svg>
+            </svg>
+          </span>
+          <span class="kk_header_brand_text">KajKori</span>
         </a>
         <button
           class="kk_header_theme_toggle"
@@ -170,7 +85,6 @@
         </button>
       </div>
     </header>
-    <!-- Header Section Ends Here -->
     <!-- Header Section Ends Here -->
 
     <!-- Content Body Starts Here -->

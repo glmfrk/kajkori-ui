@@ -1,0 +1,74 @@
+// ==========================================
+// KAJKORI - DESIGN SYSTEM VARIABLES
+// ==========================================
+
+// --- Viewport Breakpoints ---
+$bp-320: 320px;
+$bp-375: 375px;
+$bp-425: 425px;
+$bp-575: 575px;
+$bp-640: 640px;
+$bp-768: 768px;
+$bp-992: 992px;
+$bp-1024: 1024px;
+$bp-1280: 1280px;
+$bp-1440: 1440px;
+$bp-1536: 1536px;
+$bp-1920: 1920px;
+
+// --- CSS Custom Properties Scope ---
+:root {
+  // Brand Palette
+  --kk-primary: #4F46E5;
+  --kk-primary-hover: #4338CA;
+  --kk-primary-light: #EEF2FF;
+  
+  // Neutral Palette (Light Mode Default)
+  --kk-bg-body: #F9FAFB;
+  --kk-bg-surface: #FFFFFF;
+  --kk-bg-subtle: #F3F4F6;
+  --kk-border: #E5E7EB;
+  
+  // Typography Colors
+  --kk-text-main: #111827;
+  --kk-text-muted: #6B7280;
+  --kk-text-inverse: #FFFFFF;
+  
+  // System State Indicators
+  --kk-success: #10B981;
+  --kk-success-bg: #D1FAE5;
+  --kk-warning: #F59E0B;
+  --kk-danger: #EF4444;
+  --kk-danger-bg: #FEE2E2;
+  
+  // Design Tokens
+  --kk-radius-sm: 6px;
+  --kk-radius-md: 10px;
+  --kk-radius-lg: 16px;
+  --kk-radius-full: 9999px;
+  
+  --kk-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --kk-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --kk-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  --kk-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --kk-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --kk-container-max: 1200px;
+  --kk-touch-target: 44px;
+}
+
+// --- Dark Theme Token Overrides ---
+[data-theme="dark"] {
+  --kk-bg-body: #0F172A;
+  --kk-bg-surface: #1E293B;
+  --kk-bg-subtle: #334155;
+  --kk-border: #334155;
+  
+  --kk-text-main: #F8FAFC;
+  --kk-text-muted: #94A3B8;
+  
+  --kk-primary-light: rgba(79, 70, 229, 0.15);
+  --kk-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --kk-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
