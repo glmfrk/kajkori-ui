@@ -1,25 +1,215 @@
 @use "../abstracts/mixins" as *;
 
+// Header Section Styles
 .kk_header_section {
-  background-color: var(--kk-bg-surface);
-  border-bottom: 1px solid var(--kk-border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition:
-    background-color var(--kk-transition-base),
-    border-color var(--kk-transition-base);
-
-  padding: 10px 0; // tagline স্পষ্ট দেখার জন্য ১০ পিক্সেল প্যাডিং রাখা হয়েছে
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .kk_header_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  padding: 12px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Desktop Menu Horizontal Alignment
+.kk_desktop_menu {
+  display: none; // মোবাইলে হাইড থাকবে
 
   @include respond-to("768") {
-    height: 72px;
+    display: block; // ৭৬৮px বা তার ওপরে শো করবে
+  }
+
+  .kk_nav_list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .kk_nav_link {
+      text-decoration: none;
+      color: #475569;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      &:hover,
+      &.active {
+        color: #4f17c2;
+      }
+    }
+  }
+}
+
+// Header Actions (Theme toggle & Hamburger alignment)
+.kk_header_actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+// Hamburger Button Style
+.kk_hamburger_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  @include respond-to("768") {
+    display: none; // বড় স্ক্রিনে বাটন হাইড থাকবে
+  }
+
+  .kk_hamburger_bar {
+    width: 100%;
+    height: 3px;
+    background-color: #0b132b;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+}
+
+// Mobile Overlay Backdrop
+.kk_mobile_overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Mobile Off-canvas Drawer
+.kk_mobile_drawer {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 999;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // সোশ্যাল লিঙ্কগুলো নিচে পুশ করবে
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-active {
+    right: 0;
+  }
+
+  // Header Area with Logo
+  .kk_drawer_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+
+    .kk_drawer_logo {
+      display: inline-flex;
+      align-items: center;
+      height: 36px;
+
+      .kk_drawer_logo_svg {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .kk_drawer_close_btn {
+      background: transparent;
+      border: none;
+      font-size: 28px;
+      color: #64748b;
+      cursor: pointer;
+      line-height: 1;
+    }
+  }
+
+  // Navigation Menu
+  .kk_mobile_menu {
+    padding: 20px 0;
+    flex-grow: 1;
+
+    .kk_mobile_nav_list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        .kk_mobile_nav_link {
+          display: block;
+          padding: 12px 24px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #334155;
+          text-decoration: none;
+          transition:
+            background 0.2s,
+            color 0.2s;
+
+          &:hover,
+          &.active {
+            color: #4f17c2;
+            background-color: #f1f5f9;
+          }
+        }
+      }
+    }
+  }
+
+  // Footer Social Icons Area
+  .kk_drawer_footer {
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+
+    .kk_social_links {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .kk_social_icon {
+        color: #64748b;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #f8fafc;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #4f17c2;
+          background-color: #f1f5f9;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+// Desktop Menu Display Logic
+.kk_desktop_menu {
+  display: none;
+
+  @include respond-to("768") {
+    display: block;
   }
 }

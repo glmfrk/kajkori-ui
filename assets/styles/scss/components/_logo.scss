@@ -1,3 +1,5 @@
+// _logo.scss (Updated Fix)
+@use "../abstracts/mixins" as *;
 
 .kk_header_brand {
   display: inline-flex;
@@ -6,15 +8,26 @@
   background: transparent;
   border: none;
   padding: 0;
-}
+  height: 48px; // মোবাইলে হাইট
 
-.kk_header_brand_logo {
-  display: block;
-  height: 44px; // ট্যাগলাইন স্পষ্ট দেখার জন্য ৪৪ পিক্সেল রাখা হয়েছে
-  width: auto;
-  object-fit: contain;
+  @include respond-to("768") {
+    height: 56px; // ডেস্কটপে ট্যাগলাইন সহ প্রোপার স্পেসের জন্য
+  }
 
-  @media (max-width: 576px) {
-    height: 36px;
+  .kk_logo_svg,
+  svg {
+    height: 100%;
+    width: auto; // Aspect ratio ঠিক রাখবে
+    display: block;
+    overflow: visible; // ট্যাগলাইন কেটে যাওয়া রোধ করবে
+
+    .kk_logo_text,
+    .kk_logo_tagline {
+      display: none;
+
+      @include respond-to("768") {
+        display: block; // ডেস্কটপে টেক্সট ও ট্যাগলাইন দেখাবে
+      }
+    }
   }
 }

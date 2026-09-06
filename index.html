@@ -127,21 +127,21 @@
               x="212"
               y="104"
               font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-              font-size="82"
+              font-size="92"
               font-weight="900"
               fill="#0B132B"
-              letter-spacing="-2"
+              letter-spacing="2"
             >
               Kaj
             </text>
             <text
-              x="345"
+              x="365"
               y="104"
               font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-              font-size="82"
+              font-size="92"
               font-weight="900"
               fill="url(#text_kori_light)"
-              letter-spacing="-2"
+              letter-spacing="2"
             >
               Kori
             </text>
@@ -149,28 +149,258 @@
             <!-- Tagline -->
             <text
               x="214"
-              y="145"
+              y="138"
               font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-              font-size="16"
-              font-weight="700"
-              fill="#5A6A85"
-              letter-spacing="3.5"
+              font-size="22"
+              font-weight="800"
+              fill="#475569"
+              letter-spacing="2"
             >
               LET'S GET THE WORK DONE
             </text>
           </svg>
         </a>
-        <button
-          class="kk_header_theme_toggle"
-          id="kk_theme_toggle_btn"
-          type="button"
-          aria-label="Toggle theme placeholder"
-        >
-          <span class="kk_theme_icon" aria-hidden="true">☾</span>
-        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="kk_desktop_menu">
+          <ul class="kk_nav_list">
+            <li><a href="#" class="kk_nav_link active">Home</a></li>
+            <li><a href="#" class="kk_nav_link">Services</a></li>
+            <li><a href="#" class="kk_nav_link">Projects</a></li>
+            <li><a href="#" class="kk_nav_link">About Us</a></li>
+            <li><a href="#" class="kk_nav_link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="kk_header_actions">
+          <!-- Theme Toggle Button -->
+          <button
+            class="kk_header_theme_toggle"
+            id="kk_theme_toggle_btn"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span class="kk_theme_icon" aria-hidden="true">☾</span>
+          </button>
+
+          <!-- Hamburger Menu Button (Mobile Only) -->
+          <button
+            class="kk_hamburger_btn"
+            id="kk_hamburger_btn"
+            type="button"
+            aria-label="Open mobile menu"
+          >
+            <span class="kk_hamburger_bar"></span>
+            <span class="kk_hamburger_bar"></span>
+            <span class="kk_hamburger_bar"></span>
+          </button>
+        </div>
       </div>
     </header>
-    <!-- Header Section Ends Here -->
+
+    <!-- Mobile Navigation Drawer & Backdrop -->
+    <div class="kk_mobile_overlay" id="kk_mobile_overlay"></div>
+    <aside
+      class="kk_mobile_drawer"
+      id="kk_mobile_drawer"
+      aria-label="Mobile Navigation"
+    >
+      <div class="kk_drawer_header">
+        <!-- Only K Icon Logo -->
+        <a href="#" class="kk_drawer_logo" aria-label="KajKori Home">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 580 160"
+            width="75%"
+            height="75%"
+          >
+            <defs>
+              <!-- K Stem Gradient -->
+              <linearGradient
+                id="k_stem_light"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#2D124D" />
+                <stop offset="50%" stop-color="#4F17C2" />
+                <stop offset="100%" stop-color="#2563EB" />
+              </linearGradient>
+
+              <!-- Top Arm Gradient -->
+              <linearGradient
+                id="k_arm_top_light"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4F17C2" />
+                <stop offset="100%" stop-color="#2563EB" />
+              </linearGradient>
+
+              <!-- Bottom Arm Gradient -->
+              <linearGradient
+                id="k_arm_bot_light"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#2563EB" />
+                <stop offset="100%" stop-color="#00D2FF" />
+              </linearGradient>
+
+              <!-- Text Gradient for "Kori" -->
+              <linearGradient
+                id="text_kori_light"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stop-color="#4F17C2" />
+                <stop offset="100%" stop-color="#2563EB" />
+              </linearGradient>
+            </defs>
+
+            <!-- Left Speed Motion Elements -->
+            <g fill="#4F17C2">
+              <circle cx="28" cy="88" r="7" />
+              <rect x="44" y="61" width="30" height="13" rx="6.5" />
+              <rect x="44" y="81" width="30" height="13" rx="6.5" />
+              <rect x="44" y="101" width="30" height="13" rx="6.5" />
+            </g>
+
+            <!-- K Icon Base Structure -->
+            <g>
+              <!-- Left Vertical Stem -->
+              <rect
+                x="85"
+                y="22"
+                width="38"
+                height="116"
+                rx="19"
+                fill="url(#k_stem_light)"
+              />
+
+              <!-- Upper Diagonal Arm -->
+              <path
+                d="M 104 78 L 158 24 C 166 16 179 16 187 24 L 188 25 C 196 33 196 46 188 54 L 138 104 Z"
+                fill="url(#k_arm_top_light)"
+              />
+
+              <!-- Lower Diagonal Arm -->
+              <path
+                d="M 118 88 L 172 136 C 180 143 192 142 199 134 L 200 133 C 207 125 206 113 198 106 L 148 62 Z"
+                fill="url(#k_arm_bot_light)"
+              />
+
+              <!-- Integrated White Checkmark Badge -->
+              <path
+                d="M 88 80 L 114 106 C 118 110 125 110 129 106 L 182 53 C 187 48 187 40 182 35 L 176 29 C 171 24 163 24 158 29 L 121 66 L 105 50 C 100 45 92 45 87 50 L 81 56 C 76 61 76 69 81 74 Z"
+                fill="#FFFFFF"
+              />
+            </g>
+
+            <!-- Typography -->
+            <text
+              x="212"
+              y="104"
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+              font-size="92"
+              font-weight="900"
+              fill="#0B132B"
+              letter-spacing="2"
+            >
+              Kaj
+            </text>
+            <text
+              x="365"
+              y="104"
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+              font-size="92"
+              font-weight="900"
+              fill="url(#text_kori_light)"
+              letter-spacing="2"
+            >
+              Kori
+            </text>
+
+            <!-- Tagline -->
+            <text
+              x="214"
+              y="138"
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              font-size="22"
+              font-weight="800"
+              fill="#475569"
+              letter-spacing="2"
+            >
+              LET'S GET THE WORK DONE
+            </text>
+          </svg>
+        </a>
+
+        <button
+          class="kk_drawer_close_btn"
+          id="kk_drawer_close_btn"
+          type="button"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+      </div>
+
+      <nav class="kk_mobile_menu">
+        <ul class="kk_mobile_nav_list">
+          <li><a href="#" class="kk_mobile_nav_link active">Home</a></li>
+          <li><a href="#" class="kk_mobile_nav_link">Services</a></li>
+          <li><a href="#" class="kk_mobile_nav_link">Projects</a></li>
+          <li><a href="#" class="kk_mobile_nav_link">About Us</a></li>
+          <li><a href="#" class="kk_mobile_nav_link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Drawer Footer Social Links -->
+      <div class="kk_drawer_footer">
+        <div class="kk_social_links">
+          <!-- Facebook -->
+          <a href="#" class="kk_social_icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.6 13.78 5.6c1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"
+              />
+            </svg>
+          </a>
+          <!-- X (Twitter) -->
+          <a href="#" class="kk_social_icon" aria-label="X">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="kk_social_icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.7a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"
+              />
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="#" class="kk_social_icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </aside>
     <!-- Header Section Ends Here -->
 
     <!-- Content Body Starts Here -->
