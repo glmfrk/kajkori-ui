@@ -3,8 +3,8 @@
 // Header Section Styles
 .kk_header_section {
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  background-color: var(--kk-bg-surface); // #ffffff এর বদলে
+  border-bottom: 1px solid var(--kk-border); // #e2e8f0 এর ব;
 }
 
 .kk_header_container {
