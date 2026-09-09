@@ -5,6 +5,9 @@
   background-color: var(--kk-bg-surface);
   padding: 1.5rem 0;
   margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
 }
 
 .kk_footer_container {
@@ -19,5 +22,14 @@
   @include respond-to("575") {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.kk_footer_social {
+  .kk_social_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 }

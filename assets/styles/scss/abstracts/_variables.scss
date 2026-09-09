@@ -72,3 +72,70 @@ $bp-1920: 1920px;
   --kk-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
   --kk-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
+
+/* --- Root Theme Variables --- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #0b132b;
+  
+  /* Light Theme SVG Colors */
+  --logo-speed-color: #4F17C2;
+  --logo-text-kaj: #0B132B;
+  --logo-tagline: #475569;
+  
+  --stem-1: #2D124D; --stem-2: #4F17C2; --stem-3: #2563EB;
+  --arm-top-1: #4F17C2; --arm-top-2: #2563EB;
+  --arm-bot-1: #2563EB; --arm-bot-2: #00D2FF;
+  --kori-1: #4F17C2; --kori-2: #2563EB;
+}
+
+html[data-theme="dark"] {
+  --bg-color: #0F172A;
+  --text-color: #F8FAFC;
+  
+  /* Dark Theme SVG Colors */
+  --logo-speed-color: #6366F1;
+  --logo-text-kaj: #FFFFFF;
+  --logo-tagline: #94A3B8;
+
+  --stem-1: #6366F1; --stem-2: #4F46E5; --stem-3: #3B82F6;
+  --arm-top-1: #4F46E5; --arm-top-2: #3B82F6;
+  --arm-bot-1: #3B82F6; --arm-bot-2: #38BDF8;
+  --kori-1: #818CF8; --kori-2: #60A5FA;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+/* --- SVG Dynamic Color Assignments & Smooth Transitions --- */
+.kk_logo_speed_dots,
+.kk_logo_text_kaj,
+.kk_logo_tagline {
+  transition: fill 0.3s ease; // এই লাইনটি যোগ করা হয়েছে Smooth Transitions এর জন্য
+}
+
+.kk_logo_speed_dots { fill: var(--logo-speed-color); }
+.kk_logo_text_kaj { fill: var(--logo-text-kaj); }
+.kk_logo_tagline { fill: var(--logo-tagline); }
+
+// Gradient Stops Transition
+stop {
+  transition: stop-color 0.3s ease; // <-- এই লাইনটি যোগ করা হয়েছে (Gradient Smoothness-এর জন্য)
+}
+
+.stem-stop-1 { stop-color: var(--stem-1); }
+.stem-stop-2 { stop-color: var(--stem-2); }
+.stem-stop-3 { stop-color: var(--stem-3); }
+
+.arm-top-stop-1 { stop-color: var(--arm-top-1); }
+.arm-top-stop-2 { stop-color: var(--arm-top-2); }
+
+.arm-bot-stop-1 { stop-color: var(--arm-bot-1); }
+.arm-bot-stop-2 { stop-color: var(--arm-bot-2); }
+
+.kori-stop-1 { stop-color: var(--kori-1); }
+.kori-stop-2 { stop-color: var(--kori-2); }
